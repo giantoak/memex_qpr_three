@@ -25,7 +25,7 @@ def main():
     all_ad_ids = np.concatenate([cpcs[cpc_key].iloc[:, 1].values for cpc_key in cpcs], axis=0)
 
     df = pd.read_table('data/challenge_problem_one/original/url_phone_flags.tsv',
-                       index_col=False, names= ['url', 'phone', 'flags'])
+                       index_col=False, names=['review_url', 'phone', 'flags'])
 
     df.ix[:, 'flags'] = df.ix[:, 'flags'].fillna('').apply(lambda x: x.split(','))
     all_flags = set(np.concatenate(df['flags'].values, axis=0))
