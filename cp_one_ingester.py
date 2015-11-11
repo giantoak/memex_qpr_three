@@ -39,7 +39,7 @@ def main():
 
     if not os.path.exists('data/challenge_problem_one/generated'):
         os.mkdir('data/challenge_problem_one/generated')
-    df.to_pickle('data/challenge_problem_one/review_phones_and_codes.pkl')
+    df.to_pickle('data/challenge_problem_one/generated/review_phones_and_codes.pkl')
 
     all_phones = set(np.concatenate(df['phone'].values, axis=0))
     all_phones.remove('')
